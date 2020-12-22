@@ -1,0 +1,8 @@
+<launch>
+
+    <node pkg='turtlesim' type='turtlesim_node' name='simulator'/>
+    <node pkg='autoturtle' type='randomwalk_wallavoider_node.py' name='randomwalker'/>
+
+</launch>
+
+
