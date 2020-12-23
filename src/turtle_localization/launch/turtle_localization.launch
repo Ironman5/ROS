@@ -3,6 +3,7 @@
     <node pkg='turtlesim' type='turtle_teleop_key' name='teleop' output='screen'/>
 
     <node pkg='turtle_localization' type='turtle_odometry.py' name='turtle_odometry' output='screen'/>
+    <node pkg='turtle_localization' type='turtle_odometry2.py' name='turtle_odometry2' output='screen'/>
     <node pkg='turtle_localization' type='turtle2_noisy.py' name='turtle2_noisy' output='screen'/>
     <node pkg='turtle_localization' type='turtle3_filtered.py' name='turtle3_filtered' output='screen'/>
 
@@ -17,9 +18,13 @@
         <param name='world_frame' value='odom'/>
         <param name='print_diagnostics' value='true'/>
         <remap from='odometry/filtered' to='odometry/filtered_twist'/>
-        <param name='twist0' value='turtle1/sensor/twist'/>
+        <param name='twist0' value='turtle1/sensor1/twist'/>
+        <param name='twist1' value='turtle1/sensor2/twist'/>
         <param name='twist0_differential' value='false'/>
+        <param name='twist1_differential' value='false'/>
         <rosparam param='twist0_config'>[false,false,false,false,false,false,true,false,false,false,false,true,false,false,false]
+        </rosparam>
+        <rosparam param='twist1_config'>[false,false,false,false,false,false,true,false,false,false,false,true,false,false,false]
         </rosparam>
     </node>
 </launch>

@@ -24,7 +24,7 @@ if __name__ == "__main__":
     pen_setter(125,125,125,5,0)
 
     rospy.init_node('turtle2_twist_remapper_node')
-    rospy.Subscriber('turtle1/sensor/twist', TwistWithCovarianceStamped, twist_callback)
+    rospy.Subscriber('turtle1/sensor1/twist', TwistWithCovarianceStamped, twist_callback)
     pub_twist = rospy.Publisher('turtle2/cmd_vel', Twist, queue_size=1)
 
     while not rospy.is_shutdown():
