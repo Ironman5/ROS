@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     rospy.init_node('turtle_odometry2')
     rospy.Subscriber('turtle1/pose', Pose, pose_callback)
-    pub_twist = rospy.Publisher('turtle1/sensor2/twist', TwistWithCovarianceStamped, queue_size = 1)
+    pub_twist = rospy.Publisher('turtle/sensor2/twist', TwistWithCovarianceStamped, queue_size = 1)
     
     while not rospy.is_shutdown():
         continue

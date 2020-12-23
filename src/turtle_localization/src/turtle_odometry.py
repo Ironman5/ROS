@@ -3,10 +3,10 @@ import rospy, tf2_ros, turtlesim, random
 from geometry_msgs.msg import TwistWithCovarianceStamped
 from turtlesim.msg import Pose
 
-random_noise_linear = 0.02
-systemic_noise_linear = 0.2
-random_noise_angular = 0.02
-systemic_noise_angular = 0.2
+random_noise_linear = rospy.get_param("random_noise_linear")
+systemic_noise_linear = rospy.get_param("systemic_noise_linear")
+random_noise_angular = rospy.get_param("random_noise_angular")
+systemic_noise_angular = rospy.get_param("systemic_noise_angular")
 
 def pose_callback(msg):
 
